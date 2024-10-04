@@ -1,0 +1,25 @@
+{
+  "name": "Kquark",
+  "slug": "kquark",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#ffffff"
+  },
+
+  "android": {
+    "package": "com.gsa.kquark"
+  },
+  "ios": {
+    "bundleIdentifier": "com.gsa.kquark"
+  },
+
+  "plugins": [
+    [
+      "expo-dev-launcher",
+      {
+        "launchMode": "most-recent"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,19 @@
+
+platform :ios do
+  desc "Build for iOS"
+  lane :build do
+
+  end
+end
+
+platform :android do
+  desc "Build for Android"
+  lane :build do
+    Dir.chdir("..") do
+      sh("bun run prebuild --platform android")
+    end
+
+    gradle(task: 'clean', project_dir: 'android/')
+    gradle(task: 'assemble', build_type: 'Release', project_dir: 'android/')
+  end
+end    
